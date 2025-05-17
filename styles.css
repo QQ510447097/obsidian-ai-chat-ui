@@ -1,0 +1,147 @@
+/* 容器 */
+.chat-container {
+  max-width: 780px;
+  margin: 1.5rem auto;
+  padding: 1.2rem;
+  background: rgba(248, 249, 250, 0.8);
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 角色标签 */
+.role-tag {
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+  font-family: "Microsoft YaHei", sans-serif;
+  width: 100%;
+}
+
+/* 左侧角色标签 */
+.chat-bubble.left .role-tag {
+  text-align: left;
+}
+
+/* 右侧角色标签 */
+.chat-bubble.right .role-tag {
+  text-align: right;
+  padding-right: 8px;
+}
+
+/* 气泡 */
+.chat-bubble {
+  margin: 1rem 0;
+  width: fit-content;
+  max-width: 85%;
+  margin-bottom: 1.5rem;
+}
+
+/* 左侧布局 */
+.chat-bubble.left {
+  align-self: flex-start;
+  margin-right: 20px;
+}
+
+/* 右侧布局 */
+.chat-bubble.right {
+  align-self: flex-end;
+  margin-left: 20px;
+}
+
+/* 内容区域 */
+.content {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1.2rem;
+  line-height: 1.6;
+  background: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* 左侧气泡 */
+.chat-bubble.left .content {
+  background: #ebf4ff;
+  color: #2b6cb0;
+}
+
+/* 右侧气泡 */
+.chat-bubble.right .content {
+  background: #2b6cb0;
+  color: white;
+}
+
+/* 动作描述 */
+.action {
+  display: block;
+  color: #718096;
+  font-style: italic;
+  font-size: 0.9em;
+  margin: 0.3rem 0;
+}
+
+/* 错误提示 */
+.chat-error {
+  color: #e53e3e;
+  padding: 1rem;
+  border: 1px solid #fc8181;
+  border-radius: 6px;
+  background: #fff5f5;
+}
+
+/* 支持多行动作描述 */
+.action {
+  display: block;
+  color: #666;
+  font-style: italic;
+  margin: 0.5rem 0;
+  white-space: pre-line;
+}
+
+
+
+/* 深色模式（obsidian用深色模式的人更多吧，感觉颜色不太好看，不过先这样吧）*/
+.theme-dark {
+  /* 容器 */
+  .chat-container {
+    background: rgba(25, 25, 25, 0.9);  /* 接近 Obsidian 深色背景 */
+    border-color: #333;                 /* 深灰色边框 */
+  }
+
+  /* 角色标签 */
+  .role-tag {
+    color: #b0b0b0;  /* 浅灰色 */
+  }
+
+  /* 左侧气泡 */
+  .chat-bubble.left .content {
+    background: #2d2d2d;  /* 深灰色 */
+    color: #e0e0e0;       /* 浅灰色文字 */
+    border: 1px solid #404040; /* 加深边框 */
+  }
+
+  /* 右侧气泡 */
+  .chat-bubble.right .content {
+    background: #3a3a3a;  /* 比左侧稍亮的灰 */
+    color: #ffffff;       /* 纯白文字 */
+    border: 1px solid #4a4a4a;
+  }
+
+  /* 动作描述 */
+  .action {
+    color: #909090;  /* 中灰色 */
+  }
+
+  /* 气泡阴影优化 */
+  .content {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* 加深阴影 */
+  }
+
+  /* 错误提示 */
+  .chat-error {
+    background: rgba(75, 0, 0, 0.8); /* 深红背景 */
+    border-color: #5a0000;
+    color: #ff9999;
+  }
+}

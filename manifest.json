@@ -1,0 +1,11 @@
+{
+	"id": "ai-chat-ui",
+	"name": "AI聊天页面",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "一个用于解析ai导出聊天文本并生成聊天页面的插件，可以用于保存与ai的聊天记录。",
+	"author": "孤独雪",
+	"authorUrl": "https://github.com/QQ510447097",
+	"fundingUrl": "https://github.com/QQ510447097/Alipay-QRcode/blob/main/Alipay-QRcode.jpg",
+	"isDesktopOnly": true
+}
