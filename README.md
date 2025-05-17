@@ -10,15 +10,41 @@ This is a plugin for parsing chat text exported from AI software (such as DeepSe
 
 ### 安装教程（Installation Guide）
 
-1、打开浏览器，进入项目地址（[项目地址](https://github.com/QQ510447097/obsidian-ai-chat-ui)）
+1、克隆此仓库。
 
-2、下载release文件
+2、确保您的 NodeJS 版本至少为 v16 ( `node --version` )。
 
-3、打开obsidian，打开设置，点击第三方插件，点击插件文件夹
+3、使用 `npm i` 或 `yarn` 来安装依赖项。
 
-4、
+4、使用 `npm run dev` 以监视模式开始编译。
 
 
+
+1、Clone this repo. 
+
+2、Make sure your NodeJS is at least v16 (`node --version`).
+
+3、`npm i` or `yarn` to install dependencies.
+
+4、`npm run dev` to start compilation in watch mode.
+
+---
+
+### 手动安装插件（Manually installing the plugin ）
+
+1、打开浏览器，进入项目地址并下载并解压（[项目地址](https://github.com/QQ510447097/obsidian-ai-chat-ui)）
+
+2、打开obsidian，打开设置，点击第三方插件，打开插件文件夹
+
+3、把解压后的文件夹拖入插件文件夹，返回obsidian，点击加载按钮即可
+
+
+
+1、Open your web browser, go to the project address and download and extract the files ([Project Address](https://github.com/QQ510447097/obsidian-ai-chat-ui)).
+
+2、Open Obsidian, go to Settings, click on Third-Party Plugins, and open the plugin folder.
+
+3、Drag the extracted folder into the plugin folder. Return to Obsidian and click the Load button to start using the plugin.
 
 ---
 
@@ -29,6 +55,7 @@ This is a plugin for parsing chat text exported from AI software (such as DeepSe
 2、将文本粘贴，覆盖住“（在此输入对话内容）”这些内容，
 
 3、将你希望放在左侧的角色名覆盖住“发言人A名称”；将你希望放在右侧的角色名覆盖住“发言人B名称”
+
 
 
 1、Right-click - Insert dialogue area.
