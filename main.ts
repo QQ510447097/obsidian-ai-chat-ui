@@ -85,10 +85,23 @@ export default class ChatPlugin extends Plugin {
 			text: `${speaker}`
 		});
 
-		// 内容区域
+		// 内容区域（安全渲染）
 		const contentDiv = bubble.createDiv({ cls: 'content' });
-		contentDiv.innerHTML = content
-			.replace(/（(.*?)）/g, '<em class="action">$1</em>') // 转换动作描述
-			.replace(/\n/g, '<br>'); // 保留换行
+		this.processContent(content, contentDiv);
+	}
+
+	private processContent(text: string, parent: HTMLElement) {
+		const parts = text.split(/（([^）]+)）/g);
+		parts.forEach((part, index) => {
+			if (index % 2 === 1) {
+				parent.createEl('em', { cls: 'action', text: part });
+			} else if (part) {
+				const lines = part.split('\n');
+				lines.forEach((line, lineIndex) => {
+					if (lineIndex > 0) parent.createEl('br');
+					parent.createDiv({ text: line });
+				});
+			}
+		});
 	}
 }
